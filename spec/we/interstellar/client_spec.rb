@@ -11,7 +11,7 @@ RSpec.describe We::Interstellar::Client do
     context 'when called with a uuid' do
       it 'calls memberhsip endpoint with uuid' do
         expect(conn_double).to receive(:get).with("/memberships/#{user.uuid}")
-        subject.get_memberships(uuid)
+        subject.get_memberships(uuid).result
       end
     end
   end

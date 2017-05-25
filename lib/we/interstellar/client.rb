@@ -7,7 +7,8 @@ module We
       end
 
       def get_memberships(uuid)
-        connection.get("/memberships/#{uuid}")
+        response = connection.get("/memberships/#{uuid}")
+        response.body['result']['memberships']
       end
 
       private
@@ -15,6 +16,7 @@ module We
       attr_reader :connection
 
       def improve_connection
+        connection.response :json, content_type: /\bjson$/
         connection.use We::Interstellar::Errors
       end
     end

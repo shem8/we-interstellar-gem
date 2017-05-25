@@ -24,7 +24,7 @@ conn = We::Call::Connection.new(host: ENV['INTERSTELLAR_URI'], timeout: 2)
 client = We::Interstellar::Client.new(conn)
 
 # Fetch a list of memberships
-memberships = client.get_memberships('user-uuid')
+memberships = client.get_memberships('<user-uuid>')
 
 puts memberships
 
