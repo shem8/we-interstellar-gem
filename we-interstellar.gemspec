@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'we/interstellar/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "we-interstellar-gem"
+  spec.name          = "we-interstellar"
   spec.version       = We::Interstellar::VERSION
   spec.authors       = ["WeWork Engineering"]
   spec.email         = ["engineering@wework.com"]
@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.bindir        = "bin"
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
-  
+
   spec.add_dependency "faraday", ">= 0.8.0", "< 1.0"
   spec.add_dependency "faraday_middleware"
   spec.add_dependency "we-call", "~> 0.4.1"
