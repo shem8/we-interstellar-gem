@@ -13,7 +13,7 @@ Making calls to Interstellar so you don't have to!
 
 
 ```ruby
-gem 'we-interstellar-gem'
+gem 'we-interstellar'
 ```
 
 ```ruby
