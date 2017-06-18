@@ -18,7 +18,9 @@ gem 'we-interstellar'
 
 ```ruby
 # Set up the connection, passing app and env if you aren't using Rails
-conn = We::Call::Connection.new(host: ENV['INTERSTELLAR_URI'], timeout: 2)
+conn = We::Call::Connection.new(host: ENV['INTERSTELLAR_URI'], timeout: 2) do |conn|
+  conn.token_auth('intersteller_token')
+end
 
 # Instantiate the interstellar client
 client = We::Interstellar::Client.new(conn)
